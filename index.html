@@ -1,104 +1,15 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>HÓA HỌC LỚP 8</title>
 
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial;
-}
-
-body{
-    background:#eef4ff;
-}
-
-header{
-    background:#1976d2;
-    color:white;
-    padding:20px;
-    text-align:center;
-}
-
-header h1{
-    font-size:40px;
-}
-
-nav{
-    background:#1565c0;
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    padding:15px;
-}
-
-nav button{
-    border:none;
-    padding:12px 25px;
-    border-radius:8px;
-    background:white;
-    cursor:pointer;
-    font-size:16px;
-    transition:.3s;
-}
-
-nav button:hover{
-    background:#ffd54f;
-}
-
-.container{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
-    padding:30px;
-}
-
-.card{
-    background:white;
-    border-radius:12px;
-    padding:25px;
-    margin-bottom:25px;
-    box-shadow:0 0 15px rgba(0,0,0,.1);
-}
-
-.card h2{
-    color:#1565c0;
-    margin-bottom:15px;
-}
-
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
-}
-
-.item{
-    background:#2196f3;
-    color:white;
-    padding:25px;
-    border-radius:12px;
-    text-align:center;
-    cursor:pointer;
-    transition:.3s;
-}
-
-.item:hover{
-    transform:scale(1.05);
-    background:#1976d2;
-}
-
-footer{
-    text-align:center;
-    padding:20px;
-    color:#666;
-}
-
-</style>
+<link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -114,13 +25,15 @@ footer{
 
 <nav>
 
-<button onclick="home()">Trang chủ</button>
+<button onclick="home()">🏠 Trang chủ</button>
 
-<button onclick="theory()">Lý thuyết</button>
+<button onclick="theory()">📚 Lý thuyết</button>
 
-<button onclick="quiz()">Trắc nghiệm</button>
+<button onclick="quiz()">📝 Trắc nghiệm</button>
 
-<button onclick="exam()">Thi thử</button>
+<button onclick="equation()">⚗️ Phương trình</button>
+
+<button onclick="exam()">🏆 Thi thử</button>
 
 </nav>
 
@@ -128,43 +41,55 @@ footer{
 
 <div class="card">
 
-<h2>Chào mừng</h2>
+<h2>Chào mừng!</h2>
 
 <p>
-Đây là website học Hóa 8.
+Đây là website học Hóa học lớp 8.
 </p>
+
+<br>
+
+<button onclick="theory()">Bắt đầu học</button>
 
 </div>
 
 <div class="grid">
 
-<div class="item">
+<div class="item" onclick="theory()">
 
-📚<br><br>
+📚
+
+<br><br>
 
 Lý thuyết
 
 </div>
 
-<div class="item">
+<div class="item" onclick="quiz()">
 
-📝<br><br>
+📝
+
+<br><br>
 
 Trắc nghiệm
 
 </div>
 
-<div class="item">
+<div class="item" onclick="equation()">
 
-🧪<br><br>
+⚗️
 
-Phương trình
+<br><br>
+
+Cân bằng PTHH
 
 </div>
 
-<div class="item">
+<div class="item" onclick="exam()">
 
-🏆<br><br>
+🏆
+
+<br><br>
 
 Thi thử
 
@@ -176,99 +101,12 @@ Thi thử
 
 <footer>
 
-© 2026 Hóa Học Lớp 8
+<p>© 2026 HÓA HỌC LỚP 8</p>
 
 </footer>
 
-<script>
-
-function home(){
-
-document.getElementById("content").innerHTML=`
-
-<div class="card">
-
-<h2>Trang chủ</h2>
-
-<p>Chào mừng đến với website Hóa học lớp 8.</p>
-
-</div>
-
-`;
-
-}
-
-function theory(){
-
-document.getElementById("content").innerHTML=`
-
-<div class="card">
-
-<h2>📚 Lý thuyết</h2>
-
-<ul>
-
-<li>Chất - Nguyên tử - Phân tử</li>
-
-<li>Hóa trị</li>
-
-<li>Lập công thức hóa học</li>
-
-<li>Mol</li>
-
-<li>Phản ứng hóa học</li>
-
-<li>Oxi</li>
-
-<li>Hiđro</li>
-
-<li>Nước</li>
-
-<li>Dung dịch</li>
-
-</ul>
-
-</div>
-
-`;
-
-}
-
-function quiz(){
-
-document.getElementById("content").innerHTML=`
-
-<div class="card">
-
-<h2>📝 Trắc nghiệm</h2>
-
-<p>Ngân hàng câu hỏi sẽ được cập nhật.</p>
-
-<button>Bắt đầu</button>
-
-</div>
-
-`;
-
-}
-
-function exam(){
-
-document.getElementById("content").innerHTML=`
-
-<div class="card">
-
-<h2>🏆 Thi thử</h2>
-
-<p>Đề thi sẽ được cập nhật.</p>
-
-</div>
-
-`;
-
-}
-
-</script>
+<script src="script.js"></script>
 
 </body>
+
 </html>
